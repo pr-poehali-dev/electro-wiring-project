@@ -381,7 +381,7 @@ const Index = () => {
                 <div className="w-10 h-10 rounded-lg gradient-electric flex items-center justify-center">
                   <Icon name="Zap" size={24} className="text-white" />
                 </div>
-                <span className="font-bold text-xl">ЭлектроМастер</span>
+                <span className="font-bold text-xl">Ваш электрик</span>
               </div>
               <p className="text-background/70">Профессиональные электромонтажные работы в Москве и области</p>
             </div>
@@ -412,7 +412,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-background/20 mt-8 pt-8 text-center text-background/70 text-sm">
-            © 2024 ЭлектроМастер. Все права защищены.
+            © 2024 Ваш электрик. Все права защищены.
           </div>
         </div>
       </footer>

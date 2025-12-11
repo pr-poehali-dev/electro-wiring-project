@@ -21,40 +21,54 @@ const Index = () => {
 
   const services = [
     {
-      icon: 'Zap',
-      title: 'Полная замена проводки',
-      description: 'Демонтаж старой и монтаж новой электропроводки под ключ',
-      price: 'от 3500₽/м²'
+      icon: 'Award',
+      title: 'Более 15 лет опыта',
+      description: 'Работаем в сфере электромонтажа с 2009 года'
     },
     {
-      icon: 'Lightbulb',
-      title: 'Установка освещения',
-      description: 'Монтаж люстр, светильников, LED-подсветки',
-      price: 'от 800₽/шт'
+      icon: 'Users',
+      title: 'Работа без посредников',
+      description: 'Прямая связь с мастером, никаких наценок'
     },
     {
-      icon: 'Shield',
-      title: 'Электрощиты и автоматика',
-      description: 'Сборка и установка распределительных щитов',
-      price: 'от 5000₽'
+      icon: 'Wrench',
+      title: 'Берёмся за любые задачи',
+      description: 'От простой розетки до полной замены проводки'
     },
     {
-      icon: 'Plug',
-      title: 'Розетки и выключатели',
-      description: 'Установка и замена электроустановочных изделий',
-      price: 'от 300₽/шт'
+      icon: 'Sparkles',
+      title: 'Работаем чисто',
+      description: 'Убираем за собой после каждого этапа работ'
+    },
+    {
+      icon: 'Camera',
+      title: 'Ведём фотофиксацию',
+      description: 'Документируем каждый этап выполнения работ'
     },
     {
       icon: 'Home',
-      title: 'Умный дом',
-      description: 'Автоматизация освещения и электроприборов',
-      price: 'от 15000₽'
+      title: 'Работаем в меблированных квартирах',
+      description: 'Аккуратно работаем с вашей мебелью и техникой'
     },
     {
-      icon: 'AlertTriangle',
-      title: 'Аварийный ремонт',
-      description: 'Устранение неисправностей в короткие сроки',
-      price: 'от 1500₽'
+      icon: 'Tag',
+      title: 'Выгодные цены',
+      description: 'Честные цены без скрытых доплат'
+    },
+    {
+      icon: 'Clock',
+      title: 'Соблюдаем сроки',
+      description: 'Фиксируем сроки в договоре и выполняем их'
+    },
+    {
+      icon: 'CheckCircle',
+      title: 'Качественные материалы',
+      description: 'Используем сертифицированную продукцию'
+    },
+    {
+      icon: 'Hammer',
+      title: 'Заделываем штробы',
+      description: 'Восстанавливаем поверхности после прокладки проводов'
     }
   ];
 
@@ -146,10 +160,10 @@ const Index = () => {
         <div className="container relative z-10 py-20">
           <div className="max-w-3xl animate-fade-in">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Замена электропроводки <span className="text-gradient">под ключ</span>
+              Замена электропроводки в кирпичном доме
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Профессиональный монтаж электрики в квартирах. Гарантия 3 года. Фиксированные сроки и цены.
+              Электропроводка — это основа безопасности и комфорта жилья. В кирпичных домах, построенных в советское время, проводка часто выполнена из алюминия, который давно исчерпал свой ресурс. Мы более 15 лет выполняем замену электропроводки в Уфе и пригороде, строго по СНИП и ПУЭ, с гарантией качества.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="gradient-electric text-white hover:opacity-90">
@@ -176,7 +190,7 @@ const Index = () => {
                   <Icon name="Clock" size={24} className="text-white" />
                 </div>
                 <div>
-                  <div className="font-bold text-2xl">12 лет</div>
+                  <div className="font-bold text-2xl">15 лет</div>
                   <div className="text-sm text-muted-foreground">Опыт работы</div>
                 </div>
               </div>
@@ -194,25 +208,77 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="services" className="py-20 bg-muted/30">
+      <section className="py-20">
         <div className="container">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-4xl font-bold mb-4">Наши услуги</h2>
-            <p className="text-xl text-muted-foreground">Полный спектр электромонтажных работ</p>
+            <h2 className="text-4xl font-bold mb-4">5 причин заменить старую проводку</h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
+            {[
+              { num: '1', text: 'Алюминиевые провода – хуже проводят ток, быстро окисляются и подгорают' },
+              { num: '2', text: 'Старение проводки – изоляция разрушается, жилы оголяются, алюминий становится хрупким' },
+              { num: '3', text: 'Современные нагрузки – старая сеть не выдерживает работу современной техники' },
+              { num: '4', text: 'Недостаток розеток – часто всего 1–2 розетки на комнату' },
+              { num: '5', text: 'Отсутствие заземления – опасность поражения электрическим током' }
+            ].map((reason, index) => (
+              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 animate-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
+                <CardHeader>
+                  <div className="w-16 h-16 rounded-full gradient-electric flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white text-3xl font-bold">{reason.num}</span>
+                  </div>
+                  <CardDescription className="text-base text-left">{reason.text}</CardDescription>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-muted/30">
+        <div className="container">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-4xl font-bold mb-4">Как проходит замена проводки</h2>
+          </div>
+          <div className="max-w-4xl mx-auto space-y-6">
+            {[
+              'Составляем проект и подбираем материалы',
+              'Демонтируем старую проводку',
+              'Прокладываем новую медную проводку',
+              'Выполняем соединения на сварке',
+              'Монтируем щиток, розетки и выключатели',
+              'При необходимости заделываем штробы'
+            ].map((step, index) => (
+              <Card key={index} className="hover:shadow-lg transition-all duration-300 animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
+                <CardHeader className="flex flex-row items-center gap-4">
+                  <div className="w-12 h-12 rounded-full gradient-blue flex items-center justify-center flex-shrink-0">
+                    <span className="text-white text-xl font-bold">{index + 1}</span>
+                  </div>
+                  <CardTitle className="text-lg">{step}</CardTitle>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
+          <p className="text-center text-muted-foreground mt-8 text-lg">
+            Работы выполняются поэтапно, с минимумом пыли и шума
+          </p>
+        </div>
+      </section>
+
+      <section id="services" className="py-20">
+        <div className="container">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-4xl font-bold mb-4">10 причин доверить замену проводки нам</h2>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
             {services.map((service, index) => (
               <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:scale-105 animate-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
                 <CardHeader>
                   <div className="w-14 h-14 rounded-lg gradient-electric flex items-center justify-center mb-4">
                     <Icon name={service.icon} size={28} className="text-white" />
                   </div>
-                  <CardTitle>{service.title}</CardTitle>
-                  <CardDescription className="text-base">{service.description}</CardDescription>
+                  <CardTitle className="text-base">{service.title}</CardTitle>
+                  <CardDescription className="text-sm">{service.description}</CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <div className="text-2xl font-bold text-gradient">{service.price}</div>
-                </CardContent>
               </Card>
             ))}
           </div>
@@ -244,8 +310,8 @@ const Index = () => {
       <section className="py-20 bg-muted/30">
         <div className="container">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-4xl font-bold mb-4">Наши преимущества</h2>
-            <p className="text-xl text-muted-foreground">Почему выбирают нас</p>
+            <h2 className="text-4xl font-bold mb-4">Замена электропроводки в панельном доме</h2>
+            <p className="text-xl text-muted-foreground">В большинстве панельных домов проводка проложена в специальных каналах.<br/>Мы заменяем проводку без штробления стен и потолков, сохраняя чистоту и порядок.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {advantages.map((advantage, index) => (

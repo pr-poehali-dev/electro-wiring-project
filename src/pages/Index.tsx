@@ -158,7 +158,7 @@ const Index = () => {
               </Button>
               <Button size="lg" variant="outline">
                 <Icon name="Phone" size={20} className="mr-2" />
-                +7 (999) 123-45-67
+                +7 (927) 236-27-69
               </Button>
             </div>
             <div className="flex flex-wrap gap-8 mt-12">
@@ -390,7 +390,7 @@ const Index = () => {
               <div className="space-y-2 text-background/70">
                 <div className="flex items-center gap-2">
                   <Icon name="Phone" size={16} />
-                  <span>+7 (999) 123-45-67</span>
+                  <span>+7 (927) 236-27-69</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Icon name="Mail" size={16} />
@@ -418,7 +418,7 @@ const Index = () => {
       </footer>
 
       <a
-        href="https://wa.me/79991234567"
+        href="https://wa.me/79272362769"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 w-16 h-16 bg-[#25D366] hover:bg-[#20BA5A] rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 animate-scale-in"
